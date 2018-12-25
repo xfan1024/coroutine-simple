@@ -3,7 +3,7 @@
 
 MACH_HEADER ?= include/mach/$(MACH).h
 RM          ?= rm -f
-CFLAGS 		?= -Iinclude -DCOROUTINE_MACH=\"$(MACH_HEADER)\"
+CFLAGS      ?= -Iinclude -DCOROUTINE_MACH=\"$(MACH_HEADER)\"
 
 .PHONY : clean all
 
