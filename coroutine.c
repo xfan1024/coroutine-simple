@@ -35,7 +35,7 @@ void coroutine_init(struct coroutine * co, void * param, void * stack, unsigned 
     co->state = co_state_suspend;
     co->entry = entry;
     if (!setjmp(co->caller_jmpbuf)) {
-        __set_stack_and_call(co, param, stack, stack_size, entry);
+        __set_stack_and_call(co, param, stack, stack_size);
     }
 }
 

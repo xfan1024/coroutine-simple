@@ -1,8 +1,9 @@
-CC          ?= gcc
-RM          ?= rm -f
-MACH        ?= gcc_x64
+#CC          = arm-linux-gcc
+#MACH        = gcc_arm
+
 MACH_HEADER ?= include/mach/$(MACH).h
-CFLAGS ?= -Iinclude -DCOROUTINE_MACH=\"$(MACH_HEADER)\"
+RM          ?= rm -f
+CFLAGS 		?= -Iinclude -DCOROUTINE_MACH=\"$(MACH_HEADER)\"
 
 .PHONY : clean all
 
